@@ -1,6 +1,11 @@
 # Faizan Ahmad Portfolio v2
 
 Apple Terminal-inspired developer portfolio.
+<img width="1270" height="679" alt="Screenshot 2026-02-27 at 7 27 52 PM" src="https://github.com/user-attachments/assets/8ac73622-0675-4ea2-911b-8df041c48e1b" />
+<img width="1270" height="679" alt="Screenshot 2026-02-27 at 7 28 01 PM" src="https://github.com/user-attachments/assets/2278547f-78bb-42f3-bab7-a6ca55fc4396" />
+<img width="1270" height="679" alt="Screenshot 2026-02-27 at 7 28 10 PM" src="https://github.com/user-attachments/assets/d371e4a9-c83f-4452-bd55-8ddd0fa2dc6a" />
+<img width="1270" height="679" alt="Screenshot 2026-02-27 at 7 28 19 PM" src="https://github.com/user-attachments/assets/0cf7acf7-5ae1-44fc-9c99-c32eeb132475" />
+<img width="1270" height="679" alt="Screenshot 2026-02-27 at 7 28 30 PM" src="https://github.com/user-attachments/assets/ba762130-1455-4c46-a657-97e6fb2ae7bf" />
 
 ## Files
 ```
