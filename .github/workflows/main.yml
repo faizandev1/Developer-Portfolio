@@ -1,24 +1,53 @@
-name: Test Fail Job
+name: Deploy Faizan Portfolio
 
+# Run workflow on pushes to main branch
 on:
   push:
     branches:
       - main
 
 jobs:
-  fail-job-example:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      # Checkout your repo
-      - name: Checkout
+      # 1️⃣ Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Normal step
-      - name: Say Hello
-        run: echo "This is a normal step"
-
-      # Step that fails intentionally
-      - name: Fail the job
+      # 2️⃣ Verify essential files exist
+      - name: Check essential files
         run: |
-          echo "This step will fail intentionally"
-          exit 1
+          echo "Checking essential files..."
+          for file in index.html style.css main.js; do
+            if [ ! -f "$file" ]; then
+              echo "Error: $file is missing!"
+              exit 1
+            fi
+          done
+          echo "All essential files exist ✅"
+
+      # 3️⃣ Optional: Install dependencies (skip if plain HTML/CSS/JS)
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm install
+          else
+            echo "No dependencies to install"
+          fi
+
+      # 4️⃣ Optional: Build step (skip if not using bundler)
+      - name: Build project
+        run: |
+          if [ -f package.json ] && npm run build; then
+            echo "Build completed"
+          else
+            echo "No build step needed for vanilla HTML/CSS/JS"
+          fi
+
+      # 5️⃣ Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./       # root folder, change to ./dist if using build output
