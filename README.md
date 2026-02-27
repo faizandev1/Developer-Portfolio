@@ -19,18 +19,6 @@ faizan-portfolio/
     └── faizan-cv.pdf← Your CV
 ```
 
-## Deploy to Netlify (2 minutes)
-
-**Drag & Drop:**
-1. netlify.com → Sign up free
-2. Drag the `faizan-portfolio` folder onto the Netlify dashboard
-3. Done! Rename site: Site settings → Change site name
-
-**GitHub Deploy:**
-1. Create new repo → upload all files
-2. Netlify → New site from Git → connect repo
-3. Build settings: leave blank → Deploy
-
 ## Interactive Terminal Commands
 - `snake`  → play Snake game (arrow keys / WASD)
 - `quiz`   → 6-question developer quiz
