@@ -1,39 +1,24 @@
-name: Deploy Portfolio
+name: Test Fail Job
 
 on:
   push:
     branches:
-      - main   # runs workflow when you push to main
+      - main
 
 jobs:
-  build-and-deploy:
+  fail-job-example:
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ Checkout your repo
-      - name: Checkout repo
+      # Checkout your repo
+      - name: Checkout
         uses: actions/checkout@v3
 
-      # 2️⃣ Setup Node (if you need it, optional for plain HTML/CSS/JS)
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
+      # Normal step
+      - name: Say Hello
+        run: echo "This is a normal step"
 
-      # 3️⃣ Install dependencies (if any, optional)
-      - name: Install dependencies
-        run: npm install
-
-      # 4️⃣ Build project (optional)
-      - name: Build
+      # Step that fails intentionally
+      - name: Fail the job
         run: |
-          echo "No build needed for vanilla HTML/CSS/JS"
-          # For example, if you used Vite/Parcel:
-          # npm run build
-
-      # 5️⃣ Deploy to GitHub Pages (example)
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v6
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # root folder (or ./dist if you have a build folder)
+          echo "This step will fail intentionally"
+          exit 1
