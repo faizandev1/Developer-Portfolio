@@ -1,0 +1,20 @@
+# 1️⃣ Go to your project folder (you’re already here)
+cd /Volumes/local\ disk\ D/Programming/faizan-v2
+
+# 2️⃣ Initialize Git (skip if already done)
+git init
+
+# 3️⃣ Rename branch to main (GitHub standard)
+git branch -M main
+
+# 4️⃣ Add remote repository (replace URL with your GitHub repo)
+git remote add origin https://github.com/faizandev1/Developer-Portfolio.git
+
+# 5️⃣ Stage all files
+git add .
+
+# 6️⃣ Commit files
+git commit -m "Initial commit - Faizan portfolio"
+
+# 7️⃣ Push to GitHub
+git push -u origin main
