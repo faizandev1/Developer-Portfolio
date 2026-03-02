@@ -37,5 +37,8 @@ First use: submit a test message → confirm email from FormSubmit → all futur
 ## Icons
 Real official SVG icons via devicons CDN (no emojis).
 
+
+LIVE:   https://faizandev2.netlify.app/
+
 ---
 © 2025 Faizan Ahmad. All rights reserved.
